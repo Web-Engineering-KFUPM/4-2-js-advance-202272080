@@ -26,13 +26,16 @@ let Student={
    lastNAme:"AL MUBARK",
    GPA:3,
 getFullname(){
-   return this.firstName+this.lastNAme
+   return this.firstName+"  "+this.lastNAme;
 },
-setupdateGpa(newGpa){
-this.GPA= newGpa,
-}
+set gpa(value) {       
+    if (value >= 0 && value <= 4) {
+      this._gpa = value;
+    }
+  }
 
 }
+const Student1= new Student("kamel","AL NASSER",1)
 
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
@@ -108,6 +111,21 @@ Task:
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
    in each block so you can see the flow of control.
 */
+function findMax(arr) {
+  if (Array.isArray(arr) && arr.length !== 0) {
+    return Math.max(...arr);
+  }
+  throw new Error("Array must be non-empty.");
+}
+let arrr=[];
+
+try {
+  const x = findMax([]);   // This will throw
+} catch (e) {
+  console.error("error")
+} finally {
+  console.log("// This block always runs")
+}
 
 // ===================================================================================
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
@@ -120,5 +138,13 @@ Given: const words = ["ban", "babble", "make", "flab"];
 3) For matches, log "<word> matches!".
 4) Display the words that matches the pattern.
 */
+const words = ["ban", "babble", "make", "flab"];
+const re = /ab/;
+
+words.forEach(w => {
+  if (re.test(w)) {
+     console.log(`${w} matches!`);
+  }
+});
 
 // End of Advance JavaScript Lab — good luck!
