@@ -21,6 +21,18 @@ Task:
 3) Add a setter updateGpa(newGpa) or use a set accessor for gpa that validates 0.0–4.0.
 4) Create an instance/object and output its attributes using the getter(s).
 */
+let Student={
+   firstName: "Ali",
+   lastNAme:"AL MUBARK",
+   GPA:3,
+getFullname(){
+   return this.firstName+this.lastNAme
+},
+setupdateGpa(newGpa){
+this.GPA= newGpa,
+}
+
+}
 
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
@@ -30,7 +42,16 @@ Task:
 1) Make an object used as a "map" (key → value), e.g., course codes → titles.
 2) Iterate over it with for...in and display each key and value.
 */
-
+let courseCodes={
+   543:"ics321",
+   3452:"swe363",
+   2224:"ics253",
+   33453:"ias212",
+}
+console.log('all course')
+for(let code in courseCodes){
+   console.log(code+"is"+courseCodes);
+}
 // =========================================
 // TODO-3: STRING OBJECT — charAt() & length
 // =========================================
@@ -39,6 +60,12 @@ Task:
 1) Create a String object or plain string.
 2) Use .charAt(index) and .length to output characters and size.
 */
+
+
+let s = "I love JS";
+console.log(s.charAt(3))
+console.log(s.length)
+
 
 // ===================================
 // TODO-4: DATE — day, month, and year
@@ -49,7 +76,14 @@ Task:
 2) Find and display the current day of month, month (0–11), and year.
 //    (Hint: getDate(), getMonth(), getFullYear() )
 */
+const d = new Date(2025,9,16);
+d.getDate();      // Day of month: 1–31
+d.getMonth();     // Month index: 0–11  (0 = January, 11 = December)
+d.getFullYear();  // 4-digit year, e.g., 2025
 
+console.log(d.getDate)
+console.log(d.getMonth)
+console.log(d.getFullYear)
 // ============================================================
 // TODO-5: ARRAY + SPREAD — find MIN and MAX from 10 numbers
 // ============================================================
@@ -59,7 +93,11 @@ Task:
 2) Use spread syntax with Math.min(...) and Math.max(...) to find extremes.
 3) Display both values.
 */
-
+const nums = [10, 2, 30,4,5,6,7,8,9,11];
+const min = Math.min(...nums); 
+const max = Math.max(...nums);
+console.log(min)
+console.log(max)
 // ===================================================================
 // TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY edge case
 // ===================================================================
