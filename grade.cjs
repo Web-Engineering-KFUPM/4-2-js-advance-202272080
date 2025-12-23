@@ -40,7 +40,7 @@ fs.mkdirSync(FEEDBACK_DIR, { recursive: true });
 fs.mkdirSync(ARTIFACTS_DIR, { recursive: true });
 
 /** Due date: 09/17/2025 11:59 PM Riyadh time (UTC+03:00) */
-const DUE_ISO = "2025-09-17T23:59:00+03:00";
+const DUE_ISO = "2025-09-18T00:01:00+03:00";
 const DUE_EPOCH_MS = Date.parse(DUE_ISO);
 
 /** ---------- Student ID ---------- */
